@@ -27,6 +27,14 @@ public class Oeuvre {
 	public void setAuteur(String auteur) {
 		this.auteur = auteur;
 	}
+
+	public int getNumeroExemplaire() {
+		return numeroExemplaire;
+	}
+
+	public void setNumeroExemplaire(int numeroExemplaire) {
+		this.numeroExemplaire = numeroExemplaire;
+	}
 	
 	
 
