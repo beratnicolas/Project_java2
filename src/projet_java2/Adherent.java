@@ -48,4 +48,11 @@ public class Adherent {
 		return;
 	}
 
+	@Override
+	public String toString() {
+		return "Adherent : [prenom=" + prenom + ", nom=" + nom + ", adresse=" + adresse + "]";
+	}
+	
+	
+
 }

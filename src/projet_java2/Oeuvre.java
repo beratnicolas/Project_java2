@@ -36,6 +36,10 @@ public class Oeuvre {
 		this.numeroExemplaire = numeroExemplaire;
 	}
 	
+	@Override
+	public String toString() {
+		return "Oeuvre : [titre=" + titre + ", auteur=" + auteur + ", numeroExemplaire=" + numeroExemplaire + "]";
+	}
 	
 
 }
