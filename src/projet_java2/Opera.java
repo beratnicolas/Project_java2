@@ -8,6 +8,6 @@ public class Opera extends Oeuvre {
 	
 	@Override
 	public String toString() {
-		return "Opéra : [Titre=" + getTitre() + ", Auteur=" + getAuteur() + "]";
+		return "Opera : [Titre=" + getTitre() + ", Auteur=" + getAuteur() + "]";
 	}
 }

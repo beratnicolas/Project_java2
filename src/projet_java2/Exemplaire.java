@@ -2,9 +2,7 @@ package projet_java2;
 
 public class Exemplaire {
 	private int numero;
-	private String titre;
-	private String auteur;
-	private Oeuvre oeuvre = new Oeuvre(titre, auteur);
+	private Oeuvre oeuvre;
 	
 	public Exemplaire(String titre, String auteur, int numero) {
 		titre = oeuvre.getTitre();

@@ -6,7 +6,7 @@ public class Adherent {
 	private String prenom;
 	private String nom;
 	private String adresse;
-	Hashtable<Adherent, Exemplaire> dicoExemplairePret = new Hashtable<Adherent, Exemplaire>();
+	Hashtable<Adherent, Exemplaire> dicoExemplairePret;
 
 	public Adherent(String prenom, String nom, String adresse) {
 		this.prenom = prenom;

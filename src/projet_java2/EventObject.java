@@ -1,5 +1,14 @@
 package projet_java2;
 
-public class EventObject {
+import java.io.Serializable;
+
+public class EventObject implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public EventObject() {}
 
 }

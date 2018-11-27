@@ -1,6 +1,8 @@
 package projet_java2;
 
-public interface Runnable {
+import java.io.Serializable;
+
+public interface Runnable extends Serializable {
 	
 	public void run();
 
