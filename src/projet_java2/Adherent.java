@@ -1,9 +1,12 @@
 package projet_java2;
 
+import java.util.Hashtable;
+
 public class Adherent {
 	private String prenom;
 	private String nom;
 	private String adresse;
+	Hashtable<Adherent, Exemplaire> dicoExemplairePret = new Hashtable<Adherent, Exemplaire>();
 
 	public Adherent(String prenom, String nom, String adresse) {
 		this.prenom = prenom;
@@ -36,8 +39,8 @@ public class Adherent {
 	}
 	
 	public Exemplaire emprunter(Oeuvre oeuvre) {
-		int numero = oeuvre.getNumeroExemplaire() - 1; //exemple for no errors
-		Exemplaire exemplaire = new Exemplaire("a", "b", numero); //exemple for no errors
+		Exemplaire exemplaire = new Exemplaire("a", "b", 2);
+		exemplaire.setNumero(exemplaire.getNumero() + 1); 
 		return exemplaire;
 	}
 	

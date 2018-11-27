@@ -1,5 +1,5 @@
 package projet_java2;
 
-public interface EventObject {
+public class EventObject {
 
 }

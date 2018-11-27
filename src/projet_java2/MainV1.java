@@ -1,10 +1,11 @@
-/*package projet_java2;
+package projet_java2;
 
-public class Main {
+public class MainV1 {
 	public static void main( String [] args ){
         try{
 	         Adherent adherent1 = new Adherent( "Albert", "Durant", "2 allee tataouine" ) ;
-            Adherent adherent2 = new Adherent( "Joseph", "Beauve", "14 rue de la grange" ) ;
+            @SuppressWarnings("unused")
+			Adherent adherent2 = new Adherent( "Joseph", "Beauve", "14 rue de la grange" ) ;
             
          String titre = "BestOfLouisMariano" ;
             String auteur = "Louis Mariano" ;
@@ -22,4 +23,4 @@ public class Main {
             e.printStackTrace() ;
         }        
  }
-}*/
+}
