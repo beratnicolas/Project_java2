@@ -39,16 +39,16 @@ public class Adherent {
 	}
 	
 	public Exemplaire emprunter(Oeuvre oeuvre) {
-		Exemplaire exemplaire = new Exemplaire("a", "b", 2);
-		exemplaire.setNumero(exemplaire.getNumero() + 1); 
+		Exemplaire exemplaire = new Exemplaire(oeuvre.getTitre(), oeuvre.getAuteur(), 1);
+		System.out.println("Adherent" + exemplaire.toString());
 		return exemplaire;
 	}
 	
 	public void ramener(Exemplaire exemplaire) {
-		@SuppressWarnings("unused")
-		int numero = exemplaire.getNumero();//exemple for no errors
-		numero -= 1;
-		return;
+		int numero = exemplaire.getNumero();
+		if (numero > 0) {
+			exemplaire.setNumero(numero - 1);
+		}
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 package projet_java2;
 
-public class MainV1 {
+public class Main {
 	public static void main( String [] args ){
         try{
 	         Adherent adherent1 = new Adherent( "Albert", "Durant", "2 allee tataouine" ) ;

@@ -24,8 +24,16 @@ public class Exemplaire {
 
 
 
-	public void ramener(Exemplaire exemplaire){
+	public void ramener(){
 		this.numero += 1;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Exemplaire [numero=" + numero + ", oeuvre=" + oeuvre + "]";
+	}
+	
 	
 }

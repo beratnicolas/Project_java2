@@ -29,6 +29,11 @@ public class DelaiDepasseEvent extends EventObject {
 	public void setAdherentConflict(Adherent adherentConflict) {
 		this.adherentConflict = adherentConflict;
 	}
+
+	@Override
+	public String toString() {
+		return " Litige : exemplaireConflict=" + exemplaireConflict + ", adherentConflict=" + adherentConflict;
+	}
 	
 	
 

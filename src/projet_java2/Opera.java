@@ -6,6 +6,10 @@ public class Opera extends Oeuvre {
 		super(titre, auteur);
 	}
 	
+	public String type() {
+		return "Opera";
+	}
+	
 	@Override
 	public String toString() {
 		return "Opera : [Titre=" + getTitre() + ", Auteur=" + getAuteur() + "]";

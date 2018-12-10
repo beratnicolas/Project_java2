@@ -12,7 +12,7 @@ public class Bibliothecaire implements DelaiRestitutionDepasseListener {
 
 	@Override
 	public void exemplaireNonRestitue(DelaiDepasseEvent evt) {
-		
+		evt.toString();
 	}
 
 	public DelaiDepasseEvent getEvt() {
