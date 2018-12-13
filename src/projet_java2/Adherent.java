@@ -1,18 +1,30 @@
 package projet_java2;
 
-import java.util.Hashtable;
+import java.util.*;
 
 public class Adherent {
 	private String prenom;
 	private String nom;
 	private String adresse;
-	Hashtable<Adherent, Exemplaire> dicoExemplairePret;
+	private HashMap<Exemplaire, Pret> emprunts;
 
 	public Adherent(String prenom, String nom, String adresse) {
 		this.prenom = prenom;
 		this.nom = nom;
 		this.adresse = adresse;
+		this.emprunts = new HashMap<Exemplaire, Pret>();
 	}
+
+	
+	public HashMap<Exemplaire, Pret> getEmprunts() {
+		return emprunts;
+	}
+
+
+	public void setEmprunts(HashMap<Exemplaire, Pret> emprunts) {
+		this.emprunts = emprunts;
+	}
+
 
 	public String getPrenom() {
 		return prenom;
@@ -39,15 +51,25 @@ public class Adherent {
 	}
 	
 	public Exemplaire emprunter(Oeuvre oeuvre) {
-		Exemplaire exemplaire = new Exemplaire(oeuvre.getTitre(), oeuvre.getAuteur(), 1);
-		System.out.println("Adherent" + exemplaire.toString());
+		Exemplaire exemplaire = oeuvre.emprunter(this);
+		emprunts.put(exemplaire, new Pret(Pret.date_now()));
 		return exemplaire;
 	}
 	
 	public void ramener(Exemplaire exemplaire) {
-		int numero = exemplaire.getNumero();
-		if (numero > 0) {
-			exemplaire.setNumero(numero - 1);
+		emprunts.remove(exemplaire);
+	}
+	
+	public void toString_hashmap() {
+		Exemplaire clef = null;
+		//Pret valeur = null;
+		Iterator<Exemplaire> i = emprunts.keySet().iterator();
+		System.out.println("--------------------------------------------");
+		while (i.hasNext())
+		{
+		    clef = i.next();
+		  //  valeur = emprunts.get(clef);
+		    System.out.println(clef);
 		}
 	}
 

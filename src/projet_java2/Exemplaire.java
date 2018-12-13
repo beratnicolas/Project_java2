@@ -2,16 +2,26 @@ package projet_java2;
 
 public class Exemplaire {
 	private int numero;
-	private Oeuvre oeuvre;
+	public boolean dispo = true;
 	
-	public Exemplaire(String titre, String auteur, int numero) {
-		titre = oeuvre.getTitre();
-		auteur = oeuvre.getAuteur();
+	public Exemplaire(int numero) {
 		this.numero = numero;
 	}
 	
 	
 	
+	public boolean isDispo() {
+		return dispo;
+	}
+
+
+
+	public void setDispo(boolean dispo) {
+		this.dispo = dispo;
+	}
+
+
+
 	public int getNumero() {
 		return numero;
 	}
@@ -25,15 +35,15 @@ public class Exemplaire {
 
 
 	public void ramener(){
-		this.numero += 1;
+		setDispo(true);
 	}
 
 
 
-	@Override
-	public String toString() {
-		return "Exemplaire [numero=" + numero + ", oeuvre=" + oeuvre + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Exemplaire [numero=" + numero + ", titre=" + titre + ", auteur=" + auteur +"]";
+//	}
 	
 	
 }

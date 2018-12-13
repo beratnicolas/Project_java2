@@ -1,6 +1,7 @@
 package projet_java2;
 
 import java.util.ArrayList;
+import java.io.*;
 
 public class Adherents implements Runnable {
 	/**
@@ -19,12 +20,18 @@ public class Adherents implements Runnable {
 		this.listAdh = listAdh;
 	}
 
-	public void sauvegarder() {
-		
+	public void sauvegarder() throws Exception {
+		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("sauvegarde.txt"));
+		out.writeObject(this.listAdh);
+		out.close();
 	}
 	
-	public void restaurer() {
-		
+	public void restaurer() throws Exception {
+		ObjectInputStream in = new ObjectInputStream(new FileInputStream("sauvegarde.txt"));
+		@SuppressWarnings("unchecked")
+		ArrayList<Adherent> adhs = (ArrayList<Adherent>) in.readObject();
+		System.out.println(adhs);
+		in.close();
 	}
 	
 	public Adherent getAdherent(String nom, String prenom, String adresse) {
